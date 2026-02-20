@@ -1,86 +1,112 @@
-<section class="hero">
-  <div class="hero-content">
-    <h1>STUDIO LEXE</h1>
-    <p class="tagline">Diritto. Strategia. Visione.</p>
-    <a href="#contatti" class="cta">Richiedi una consulenza</a>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDIO LEXE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET BASE */
+    body { margin:0; font-family: 'Inter', sans-serif; background:#FFFFFF; color:#000; scroll-behavior: smooth;}
+    a { text-decoration:none; color:inherit; }
 
-<style>
-/* RESET BASE */
-body {
-  margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: #FFFFFF;
-  color: #000000;
-}
+    /* HEADER (sticky minimal) */
+    header { position: fixed; top:0; width:100%; background:#FFFFFF; z-index:1000; display:flex; justify-content:center; border-bottom:1px solid #F3F3F3; }
+    header nav { display:flex; gap:30px; padding:15px 0; }
+    header nav a { font-weight:500; color:#2B2B2B; letter-spacing:1px; transition:0.3s; }
+    header nav a:hover { color:#000000; }
 
-/* HERO SECTION */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  background: #FFFFFF;
-}
+    /* HERO */
+    .hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 20px; background:#FFFFFF; }
+    .hero-content { max-width:900px; animation: fadeIn 1.2s ease-in-out; }
+    .hero h1 { font-size:72px; font-weight:600; margin:0; letter-spacing:4px; }
+    .hero .tagline { font-size:20px; margin-top:20px; color:#2B2B2B; letter-spacing:2px; }
+    .cta { display:inline-block; margin-top:40px; padding:14px 32px; border:2px solid #2B2B2B; color:#2B2B2B; font-size:14px; letter-spacing:1.5px; transition: all 0.3s ease; }
+    .cta:hover { background:#2B2B2B; color:#FFFFFF; }
 
-.hero-content {
-  max-width: 900px;
-  animation: fadeIn 1.2s ease-in-out;
-}
+    @keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
 
-.hero h1 {
-  font-size: 72px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  margin: 0;
-}
+    /* SEZIONI GENERALI */
+    section { padding:100px 20px; max-width:1200px; margin:0 auto; }
+    h2 { font-size:36px; margin-bottom:40px; color:#000; text-align:center; }
+    p { font-size:16px; line-height:1.8; color:#2B2B2B; max-width:900px; margin:0 auto 20px auto; text-align:center; }
 
-.tagline {
-  font-size: 20px;
-  margin-top: 20px;
-  color: #2B2B2B;
-  letter-spacing: 2px;
-}
+    /* GRIGLIA COMPETENZE */
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:30px; margin-top:40px; }
+    .card { border:1px solid #2B2B2B; padding:30px; text-align:center; transition:all 0.3s; }
+    .card:hover { background:#F3F3F3; cursor:pointer; }
 
-.cta {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 14px 32px;
-  border: 2px solid #2B2B2B;
-  text-decoration: none;
-  color: #2B2B2B;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  transition: all 0.3s ease;
-}
+    /* CONTATTI */
+    .contact-info { text-align:center; margin-top:30px; }
+    .contact-info p { margin:10px 0; }
 
-.cta:hover {
-  background: #2B2B2B;
-  color: #FFFFFF;
-}
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .hero h1 { font-size:42px; letter-spacing:2px; }
+      .hero .tagline { font-size:16px; }
+      .cta { padding:12px 24px; }
+      h2 { font-size:28px; }
+    }
+  </style>
+</head>
+<body>
 
-/* ANIMAZIONE */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <a href="#identita">Identità</a>
+      <a href="#competenze">Competenze</a>
+      <a href="#news">News</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </header>
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 42px;
-    letter-spacing: 2px;
-  }
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>STUDIO LEXE</h1>
+      <p class="tagline">Diritto. Strategia. Visione.</p>
+      <a href="#contatti" class="cta">Richiedi una consulenza</a>
+    </div>
+  </section>
 
-  .tagline {
-    font-size: 16px;
-  }
+  <!-- LA NOSTRA IDENTITÀ -->
+  <section id="identita">
+    <h2>La nostra identità</h2>
+    <p>STUDIO LEXE nasce da un percorso professionale internazionale e da una visione chiara: coniugare competenza giuridica e visione strategica per imprese e professionisti.</p>
+    <p>Il fondatore Giovanni, con esperienza ad Amsterdam e Londra, ha avviato le sedi di Milano e Padova, evolvendo lo studio in una struttura moderna e multidisciplinare.</p>
+  </section>
 
-  .cta {
-    padding: 12px 24px;
-  }
-}
-</style>
+  <!-- COMPETENZE -->
+  <section id="competenze">
+    <h2>Competenze</h2>
+    <div class="grid">
+      <div class="card">Diritto Civile</div>
+      <div class="card">Diritto Commerciale</div>
+      <div class="card">Diritto del Lavoro</div>
+      <div class="card">Diritto Societario</div>
+      <div class="card">Corporate Governance</div>
+      <div class="card">Diritto Internazionale</div>
+      <div class="card">Operazioni Straordinarie</div>
+      <div class="card">Consulenza Strategica</div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <h2>News</h2>
+    <p>Scopri le nostre ultime novità, eventi e comunicati stampa.</p>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <div class="contact-info">
+      <p>Email: info@studiolexe.it</p>
+      <p>Telefono: 000 000 0000</p>
+      <p>Milano | Padova</p>
+    </div>
+  </section>
+
+</body>
+</html>
