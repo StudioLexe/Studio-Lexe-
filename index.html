@@ -1,0 +1,86 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>STUDIO LEXE</h1>
+    <p class="tagline">Diritto. Strategia. Visione.</p>
+    <a href="#contatti" class="cta">Richiedi una consulenza</a>
+  </div>
+</section>
+
+<style>
+/* RESET BASE */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: #FFFFFF;
+}
+
+.hero-content {
+  max-width: 900px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #2B2B2B;
+  letter-spacing: 2px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  border: 2px solid #2B2B2B;
+  text-decoration: none;
+  color: #2B2B2B;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: #2B2B2B;
+  color: #FFFFFF;
+}
+
+/* ANIMAZIONE */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .cta {
+    padding: 12px 24px;
+  }
+}
+</style>
